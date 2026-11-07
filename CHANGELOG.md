@@ -9,4 +9,5 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- Add EU AI Act checklist library and CLI with support for 2024/1689 and 2026/1744 amendments
 - Initial project structure from the factory utility template.

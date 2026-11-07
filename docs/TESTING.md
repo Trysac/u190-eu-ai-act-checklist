@@ -1,20 +1,7 @@
 # Testing
 
-## Running
+Tests are located in `tests/` and executed via `pytest`.
 
-```sh
-uv run pytest --cov=eu_ai_act_checklist   # tests with coverage report
-uv run python scripts/check.py      # every gate, as CI and the factory run it
-```
-
-## Policy
-
-- Branch coverage of `src/eu_ai_act_checklist` must stay at or above 80 %; the gate fails below it.
-- Tests exercise the public API (`import eu_ai_act_checklist`) and assert every observable effect:
-  return values, raised exceptions and their messages.
-- Each bug fix starts with a failing test that reproduces it.
-- Tests are deterministic: no network, no wall clock, no dependence on test order.
-
-## Layout
-
-`tests/test_<module>.py` mirrors each public module. Shared fixtures go in `tests/conftest.py`.
+- `tests/test_checklist.py`: Verifies the core `assess` logic against acceptance criteria, including prohibited practice logic, high-risk scoring, transparency triggers, and GPAI obligations.
+- `tests/test_eu_ai_act_checklist.py`: Tests the public API for versioning and semver compliance.
+- **Coverage**: Includes boundary checks (max input size), validation errors (unknown keys, bad types), and rendering formats (JSON/markdown).

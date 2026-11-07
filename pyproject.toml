@@ -19,6 +19,9 @@ classifiers = [
 ]
 dependencies = []
 
+[project.scripts]
+eu-ai-act-checklist = "eu_ai_act_checklist.__main__:main"
+
 [project.urls]
 Homepage = "https://github.com/Trysac/u190-eu-ai-act-checklist"
 Source = "https://github.com/Trysac/u190-eu-ai-act-checklist"
