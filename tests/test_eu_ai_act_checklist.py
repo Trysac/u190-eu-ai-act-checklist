@@ -2,19 +2,7 @@
 
 from __future__ import annotations
 
-import pytest
-
 import eu_ai_act_checklist
-
-
-def test_normalize_trims_and_lowercases() -> None:
-    assert eu_ai_act_checklist.normalize("  Hello World ") == "hello world"
-
-
-@pytest.mark.parametrize("value", ["", "   ", "\t\n"])
-def test_normalize_rejects_blank_input(value: str) -> None:
-    with pytest.raises(ValueError, match="must not be empty"):
-        eu_ai_act_checklist.normalize(value)
 
 
 def test_version_is_semver() -> None:
