@@ -4,8 +4,10 @@ Teams building AI features hear that the EU AI Act applies but cannot tell which
 
 ## Installation
 
+Not published to PyPI yet. Install it from GitHub:
+
 ```bash
-pip install trysac-eu-ai-act-checklist
+pip install "git+https://github.com/Trysac/u190-eu-ai-act-checklist"
 ```
 
 ## Usage
